@@ -3,6 +3,7 @@ export const defaultTheme = {
         WHITE: '#FFFFFF',
         WHITE_100: '#F8F5F9',
 
+        GRAY_50:'#cdc3c3',
         GRAY_100:'#645A71',
         GRAY_200:'#50475E',
         GRAY_300:'#3E354B',

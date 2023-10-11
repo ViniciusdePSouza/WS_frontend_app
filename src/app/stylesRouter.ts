@@ -7,4 +7,15 @@ export const Container = styled.div`
 
 export const Content = styled.div`
     display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 2rem;
+`
+
+export const CarrosselDiv = styled.div`
+display: flex;
+align-items: center;
+
+padding: 2rem;
 `
