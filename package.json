@@ -1,5 +1,5 @@
 {
-  "name": "wsfront",
+  "name": "wscommerce",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,14 +9,18 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@types/styled-components": "^5.1.28",
     "next": "13.5.4",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
-    "@types/node": "^20.8.4",
-    "@types/react": "^18.2.27",
+    "@swc/plugin-styled-components": "^1.5.87",
+    "@types/node": "^20",
+    "@types/react": "^18",
     "@types/react-dom": "^18",
-    "typescript": "^5.2.2"
+    "babel-plugin-styled-components": "^2.1.4",
+    "typescript": "^5"
   }
 }
