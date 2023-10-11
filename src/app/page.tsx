@@ -1,3 +1,10 @@
+"use client"
+
+import { Menu } from "@/components/Menu";
+import { Container } from "./stylesRouter";
+
 export default function Home() {
-  return <h1>Hello world!</h1>;
+  return <Container>
+    <Menu/>
+  </Container>;
 }
