@@ -29,11 +29,11 @@ export const Content = styled.div`
 
 export const ImageDiv = styled.div`
   width: 100%;
-
+  height: 30vh;
   img {
-    width: 100%;
-    height: 30vh;
     object-fit: cover;
+    width: 100%;
+    height: 100%;
   }
 `;
 

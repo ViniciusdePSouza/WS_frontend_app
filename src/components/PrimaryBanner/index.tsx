@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ButtonDiv, Container, Content, ImageDiv } from "./styles";
 import { Button } from "../Button";
 

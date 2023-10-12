@@ -22,7 +22,6 @@ export function Menu() {
   useEffect(() => {
     async function populateAllTags() {
       const response = await fetchAllTags();
-      console.log(response.data)
       setAllTags(response.data);
 
     }

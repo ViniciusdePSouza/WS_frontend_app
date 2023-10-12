@@ -17,13 +17,14 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header/>
 
-        <StyledComponentsRegistry>
-          <ThemeProvider theme={defaultTheme}>
-            <Providers>{children}</Providers>
-          </ThemeProvider>
-        </StyledComponentsRegistry>
+          <StyledComponentsRegistry>
+            <ThemeProvider theme={defaultTheme}>
+              <Header/>
+              <Providers>{children}</Providers>
+            </ThemeProvider>
+          </StyledComponentsRegistry>
+
       </body>
     </html>
   );
