@@ -45,9 +45,7 @@ export default function Home() {
       <Content>
         {products.length > 0 && (
           <PrimaryBanner
-            photo={products[0].photo}
-            price={products[0].price}
-            description={products[0].description}
+            product={products[0]}
           />
         )}
 

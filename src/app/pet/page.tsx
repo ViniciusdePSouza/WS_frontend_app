@@ -40,13 +40,7 @@ export default function Pet(){
         <Container>
           <Menu />
           <Content>
-            {products.length > 0 && (
-              <PrimaryBanner
-                photo={products[0].photo}
-                price={products[0].price}
-                description={products[0].description}
-              />
-            )}
+          {products.length > 0 && <PrimaryBanner product={products[0]} />}
     
             {products.length > 0 && (
               <CarrouselDiv
@@ -57,7 +51,7 @@ export default function Pet(){
                 className="carrousel-wrapper"
               >
                 {products.map((product) => (
-                  <Carousel.Item>
+                  <Carousel.Item key={product.id}>
                     <CarouselCard photo={product.photo} price={product.price} />
                   </Carousel.Item>
                 ))}

@@ -32,7 +32,7 @@ export function Menu() {
     <Container>
       <h2>Categories</h2>
       <ul>
-        {allTags.length &&
+        {allTags &&
           allTags.map((tag) => (
             <li key={tag.id}>
               <Link href={tag.path}>
