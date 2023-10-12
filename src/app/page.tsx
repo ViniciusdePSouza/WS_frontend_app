@@ -20,7 +20,7 @@ import { CarouselCard } from "@/components/CarouselCard";
 export default function Home() {
   const [products, setProducts] = useState<ProductsProps[]>([]);
 
-  async function fetchAllTags() {
+  async function fetchAllProducts() {
     const response = await api.get("/products");
 
     return response;
@@ -28,7 +28,7 @@ export default function Home() {
 
   useEffect(() => {
     async function populateAllTags() {
-      const response = await fetchAllTags();
+      const response = await fetchAllProducts();
       const allProducts = response.data;
       const filteredByTagProducts = allProducts.filter(
         (product: { tag: number }) => product.tag === 2
