@@ -1,31 +1,35 @@
 import { Button } from "../Button";
 import { Container, Content, ProductInfo } from "./styles";
+import { ProductsProps } from "@/@types/products";
+import { useCart } from "@/hooks/cartContext";
 
 interface SecondaryBannerProps {
-  photo: string;
-  price: number;
-  description: string;
-  name: string;
+  product: ProductsProps;
 }
 
-export function SecondaryBanner({
-  photo,
-  price,
-  description,
-  name,
-}: SecondaryBannerProps) {
+export function SecondaryBanner({ product }: SecondaryBannerProps) {
+  const { addProduct } = useCart();
+
+  const productToCart = {
+    ...product,
+    quantity: 1,
+  };
   return (
     <Container>
       <Content>
-        <img src={photo} alt="Product Photo" />
+        <img src={product.photo} alt="Product Photo" />
         <ProductInfo>
-          <strong>Only {`$${Number(price).toFixed(2)}`}</strong>
-          <span>{name}</span>
-          <p>{description}</p>
+          <strong>Only {`$${Number(product.price).toFixed(2)}`}</strong>
+          <span>{product.name}</span>
+          <p>{product.description}</p>
         </ProductInfo>
       </Content>
 
-      <Button title={"Buy Now"} isLoading={false}/>
+      <Button
+        title={"Buy Now"}
+        isLoading={false}
+        onClick={() => addProduct(productToCart)}
+      />
     </Container>
   );
 }

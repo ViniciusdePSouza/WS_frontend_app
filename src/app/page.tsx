@@ -43,11 +43,7 @@ export default function Home() {
     <Container>
       <Menu />
       <Content>
-        {products.length > 0 && (
-          <PrimaryBanner
-            product={products[0]}
-          />
-        )}
+        {products.length > 0 && <PrimaryBanner product={products[0]} />}
 
         {products.length > 0 && (
           <CarrouselDiv
@@ -58,7 +54,7 @@ export default function Home() {
             className="carrousel-wrapper"
           >
             {products.map((product) => (
-              <Carousel.Item>
+              <Carousel.Item key={product.id}>
                 <CarouselCard photo={product.photo} price={product.price} />
               </Carousel.Item>
             ))}
@@ -66,23 +62,9 @@ export default function Home() {
         )}
 
         <LowerBannersDiv>
-          {products.length > 0 && (
-            <SecondaryBanner
-              photo={products[1].photo}
-              name={products[1].name}
-              price={products[1].price}
-              description={products[1].description}
-            />
-          )}
+          {products.length > 0 && <SecondaryBanner product={products[1]} />}
 
-          {products.length > 0 && (
-            <TertiaryBanner
-              photo={products[2].photo}
-              name={products[2].name}
-              price={products[2].price}
-              description={products[2].description}
-            />
-          )}
+          {products.length > 0 && <TertiaryBanner product={products[2]} />}
         </LowerBannersDiv>
       </Content>
     </Container>
