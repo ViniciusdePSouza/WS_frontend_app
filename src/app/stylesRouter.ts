@@ -1,37 +1,42 @@
 import { styled } from "styled-components";
 
+import Carousel from "better-react-carousel";
+
 export const Container = styled.div`
-    display: grid;
-    grid-template-columns: 15% auto;
-`
+  display: grid;
+  grid-template-columns: 15% auto;
+`;
 
 export const Content = styled.div`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    padding: 2rem;
-`
+  gap: 2rem;
 
-export const CarrouselDiv = styled.div`
-width: 100%;
-height: 300px;
+  padding: 2rem;
+`;
 
-display: flex;
-align-items: center;
+export const CarrouselDiv = styled(Carousel)`
+  width: 100%;
+  height: 30px;
 
-padding: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-border: 1px solid #000;
+  padding: 2rem;
 
-margin-top: 5rem;
-`
+  border: 1px solid #000;
+
+  margin-top: 3rem;
+`;
 
 export const LowerBannersDiv = styled.div`
-width: 100%;
-display: flex;
-align-items: flex-start;
-justify-content: center;
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
 
-padding: 2rem 0;
-`
+  padding: 2rem 0;
+`;
