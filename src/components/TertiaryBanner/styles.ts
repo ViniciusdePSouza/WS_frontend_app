@@ -49,19 +49,28 @@ export const ProductInfo = styled.div`
 
   button {
     all: unset;
+  width: 100%;
 
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-    border: 1px solid ${({ theme }) => theme.COLORS.GRAY_400};
-    font-size: 1.6rem;
-    font-weight: 700;
-    color: ${({ theme }) => theme.COLORS.RED};
+  padding: 1.2rem 0;
 
-    padding: 1.2rem 0;
+  font-size: 2.4rem;
+  font-weight: 700;
 
-    cursor: pointer;
+  border-radius: 8px;
+
+  color: ${({ theme }) => theme.COLORS.RED};
+
+  background: ${({ theme }) => theme.COLORS.PURPLE_100};
+
+  cursor: pointer;
+
+  &:disabled {
+    cursor: not-allowed;
+    background-color: ${({ theme }) => theme.COLORS.GRAY_100};
+  }
   }
 `;

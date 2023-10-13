@@ -14,11 +14,11 @@ export const Container = styled.button`
   font-size: 3.6rem;
   font-weight: 700;
 
-  color: ${({ theme }) => theme.COLORS.GRAY_400};
+  border-radius: 8px;
 
-  background: ${({ theme }) => theme.COLORS.WHITE};
+  color: ${({ theme }) => theme.COLORS.WHITE_100};
 
-  border: 1px solid ${({ theme }) => theme.COLORS.GRAY_400};
+  background: ${({ theme }) => theme.COLORS.PURPLE_500};
 
   cursor: pointer;
 

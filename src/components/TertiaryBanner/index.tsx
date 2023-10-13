@@ -1,4 +1,3 @@
-import { Button } from "../Button";
 import { Container, Content, ProductInfo } from "./styles";
 import { ProductsProps } from "@/@types/products";
 import { useCart } from "@/hooks/cartContext";

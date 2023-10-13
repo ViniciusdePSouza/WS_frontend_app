@@ -17,13 +17,17 @@ export const Content = styled.div`
   flex-direction: column;
   align-items: flex-start;
 
+  gap: 1rem;
+
   span {
     font-size: 3.6rem;
     font-weight: 700;
   }
 
   p {
-    font-size: 1.8rem;
+    font-size: 2rem;
+    color: ${({ theme }) => theme.COLORS.GRAY_200};
+    font-family: 'Roboto', sans-serif
   }
 `;
 
@@ -34,6 +38,8 @@ export const ImageDiv = styled.div`
     object-fit: cover;
     width: 100%;
     height: 100%;
+
+    border-radius: 1.6rem;
   }
 `;
 
