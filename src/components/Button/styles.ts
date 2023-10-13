@@ -22,6 +22,12 @@ export const Container = styled.button`
 
   cursor: pointer;
 
+  transition: transform 0.2s;
+
+  &:active {
+      box-shadow: inset -4px 4px 0 ${({ theme }) => theme.COLORS.GRAY_400};
+    }
+
   &:disabled {
     cursor: not-allowed;
     background-color: ${({ theme }) => theme.COLORS.GRAY_100};

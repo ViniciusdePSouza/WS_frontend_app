@@ -10,6 +10,7 @@ justify-content: center;
 
 img{
     width: 100%;
+    border-radius: 16px;
 }
 
 span {

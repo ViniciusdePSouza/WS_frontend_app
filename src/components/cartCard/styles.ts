@@ -12,6 +12,8 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.COLORS.PURPLE_100};
 
   border-radius: 8px;
+
+  box-shadow: 0px 4px 16px 0px #EAE2FD;
 `;
 
 export const FirstColumn = styled.div`
@@ -53,5 +55,17 @@ export const Column = styled.div`
     justify-content: center;
 
     border-radius: 8px;
+
+    cursor: pointer;
+
+    transition: transform 0.2s;
+
+    &:active {
+      box-shadow: inset -4px 4px 0 ${({ theme }) => theme.COLORS.PURPLE_300};;
+    }
+
+    &:hover {
+      filter: brightness(1.1);
+    }
   }
 `;

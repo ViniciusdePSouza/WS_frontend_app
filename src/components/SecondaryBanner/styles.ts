@@ -19,6 +19,7 @@ export const Content = styled.div`
 
   img {
     width: 50%;
+    border-radius: 16px;
   }
 `;
 

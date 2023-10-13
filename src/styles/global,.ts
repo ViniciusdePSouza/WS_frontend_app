@@ -12,7 +12,7 @@ export const GlobalStyle = createGlobalStyle`
     }
 
     body {
-        background: ${({theme}) => theme.COLORS.WHITE};
+        background: ${({ theme }) => theme.COLORS.WHITE};
     }
 
     body, input, textarea, button {
@@ -37,4 +37,4 @@ export const GlobalStyle = createGlobalStyle`
     button:disabled {
         cursor: disabled;
     }
-`
+`;
