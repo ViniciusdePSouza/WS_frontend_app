@@ -6,8 +6,8 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  border-right: 1px solid ${({ theme }) => theme.COLORS.GRAY_400};
-
+  border-right: 4px solid ${({ theme }) => theme.COLORS.GRAY_50};
+  
   padding: 0 2rem;
 `;
 
