@@ -1,12 +1,12 @@
 "use client";
 
 import { TagsProps } from "@/@types/tags";
-import { Anchor, Container } from "./styles";
+import { Anchor, Container, NavLink } from "./styles";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
 import { api } from "@/lib/axios";
+import { Tag } from "@phosphor-icons/react";
 
 export function Menu() {
   const [allTags, setAllTags] = useState<TagsProps[]>([]);
@@ -35,22 +35,22 @@ export function Menu() {
         {allTags &&
           allTags.map((tag) => (
             <li key={tag.id}>
-              <Link href={tag.path}>
-                -{" "}
+              <NavLink href={tag.path}>
+                <Tag size={32} color="#F8F5F9"/>
                 <Anchor active={pathname === `${tag.path}` ? 'underline' : 'none'}>
                   {tag.description}
                 </Anchor>
-              </Link>
+              </NavLink>
             </li>
           ))}
 
         <li >
-          <Link href='/cart'>
-            -{" "}
+          <NavLink href='/cart'>
+            <Tag size={32} color="#F8F5F9"/>
             <Anchor active={pathname === '/cart' ? 'underline' : 'none'}>
               Cart
             </Anchor>
-          </Link>
+          </NavLink>
         </li>
       </ul>
     </Container>

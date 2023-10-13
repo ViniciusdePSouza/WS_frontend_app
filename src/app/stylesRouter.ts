@@ -14,7 +14,7 @@ export const Content = styled.div`
 
   gap: 2rem;
 
-  padding: 2rem;
+  padding: 4rem 6rem;
 
   h1 {
     font-size: 3.6rem;
