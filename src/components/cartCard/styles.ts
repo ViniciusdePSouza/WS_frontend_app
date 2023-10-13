@@ -3,7 +3,7 @@ import { styled } from "styled-components";
 export const Container = styled.div`
   width: 80%;
   display: grid;
-  grid-template-columns: 6fr 2fr 2fr;
+  grid-template-columns: 4fr 2fr 2fr 2fr;
 
   font-size: 2rem;
 
@@ -39,5 +39,19 @@ export const Column = styled.div`
     font-size: 1.6rem;
     font-weight: 400;
     color: ${({ theme }) => theme.COLORS.GRAY_200};
+  }
+
+  button {
+    all: unset;
+
+    padding: 2rem;
+
+    background-color: ${({ theme }) => theme.COLORS.PURPLE_200};
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 8px;
   }
 `;

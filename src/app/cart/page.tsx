@@ -14,7 +14,7 @@ export default function Cart(){
             <h1>My cart itens</h1>
             {
                 cart && cart.map(product => (
-                    <CardCart key={product.id} name={product.name} price={product.price} quantity={product.quantity !== undefined ? product.quantity : 1} />
+                    <CardCart key={product.id} id={product.id} name={product.name} price={product.price} quantity={product.quantity !== undefined ? product.quantity : 1} />
                 ))
             }
 

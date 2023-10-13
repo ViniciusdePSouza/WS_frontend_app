@@ -34,14 +34,14 @@ function CartProvider({children}: CartProviderProps) {
             localStorage.setItem('@ws-front:cart', JSON.stringify(updatedCart));
             console.log(updatedCart); 
             setCart(updatedCart);
+            alert('Product added to your cart')
         }  else {
             const updatedCart = [...cart, { ...newProduct, quantity: 1 }];
             console.log(updatedCart)
             localStorage.setItem('@ws-front:cart', JSON.stringify(updatedCart)); 
             setCart(updatedCart);
+            alert('Product added to your cart')
         }
-
-        
     }
 
     function deleteProduct(id: number) {
