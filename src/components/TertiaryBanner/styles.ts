@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
 
   padding: 0 2rem;
-  
+
   font-family: "Roboto", sans-serif;
 
   p {
@@ -50,28 +50,34 @@ export const ProductInfo = styled.div`
 
   button {
     all: unset;
-  width: 100%;
+    width: 100%;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-  padding: 1.2rem 0;
+    padding: 1.2rem 0;
 
-  font-size: 2.4rem;
-  font-weight: 700;
+    font-size: 2.4rem;
+    font-weight: 700;
 
-  border-radius: 8px;
+    border-radius: 8px;
 
-  color: ${({ theme }) => theme.COLORS.RED};
+    color: ${({ theme }) => theme.COLORS.RED};
 
-  background: ${({ theme }) => theme.COLORS.PURPLE_100};
+    background: ${({ theme }) => theme.COLORS.PURPLE_100};
 
-  cursor: pointer;
+    cursor: pointer;
 
-  &:disabled {
-    cursor: not-allowed;
-    background-color: ${({ theme }) => theme.COLORS.GRAY_100};
-  }
+    transition: transform 0.2s;
+
+    &:active {
+      box-shadow: inset -4px 4px 0 ${({ theme }) => theme.COLORS.GRAY_100};
+    }
+
+    &:disabled {
+      cursor: not-allowed;
+      background-color: ${({ theme }) => theme.COLORS.GRAY_100};
+    }
   }
 `;
