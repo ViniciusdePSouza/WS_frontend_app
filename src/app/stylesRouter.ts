@@ -15,6 +15,11 @@ export const Content = styled.div`
   gap: 2rem;
 
   padding: 2rem;
+
+  h1 {
+    font-size: 3.6rem;
+    font-weight: bold;
+  }
 `;
 
 export const CarrouselDiv = styled(Carousel)`

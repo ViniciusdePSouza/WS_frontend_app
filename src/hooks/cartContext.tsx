@@ -3,7 +3,7 @@ import { ProductsProps } from "@/@types/products";
 import { ReactNode, createContext, useContext, useEffect, useState } from "react";
 
 interface CartContextType {
-    cart: ProductsProps[];
+    cart: CardProductsProps[];
     addProduct: (product: ProductsProps) => void;
     deleteProduct: (id: number) => void;
 }
