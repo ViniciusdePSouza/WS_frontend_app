@@ -37,7 +37,7 @@ export function Menu() {
             <li key={tag.id}>
               <Link href={tag.path}>
                 -{" "}
-                <Anchor active={pathname === `${tag.path}`}>
+                <Anchor active={pathname === `${tag.path}` ? 'underline' : 'none'}>
                   {tag.description}
                 </Anchor>
               </Link>
@@ -47,7 +47,7 @@ export function Menu() {
         <li >
           <Link href='/cart'>
             -{" "}
-            <Anchor active={pathname === '/cart'}>
+            <Anchor active={pathname === '/cart' ? 'underline' : 'none'}>
               Cart
             </Anchor>
           </Link>

@@ -1,6 +1,6 @@
 import { styled } from "styled-components";
 
-export type AnchorTextDecoration = boolean;
+type AnchorTextDecoration = 'underline' | 'none';
 
 interface AnchorContainerProps {
   active: AnchorTextDecoration;
@@ -43,5 +43,5 @@ export const Container = styled.nav`
 export const Anchor = styled.a<AnchorContainerProps>`
   text-decoration: none;
   color: #333;
-  text-decoration: ${(props) => (props.active ? "underline" : "none")};
+  text-decoration: ${(props) => props.active};
 `;
