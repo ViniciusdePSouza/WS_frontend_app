@@ -13,7 +13,7 @@ export const Container = styled.div`
 
   border-radius: 8px;
 
-  box-shadow: 0px 4px 16px 0px #EAE2FD;
+  box-shadow: 0px 4px 16px 0px ${({ theme }) => theme.COLORS.PURPLE_300};
 `;
 
 export const FirstColumn = styled.div`

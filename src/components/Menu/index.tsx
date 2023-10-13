@@ -1,7 +1,7 @@
 "use client";
 
 import { TagsProps } from "@/@types/tags";
-import { Anchor, Container, NavLink } from "./styles";
+import { Anchor, Container, LiMenu, NavLink } from "./styles";
 
 import { usePathname } from "next/navigation";
 import React, { useEffect, useState } from "react";
@@ -34,24 +34,23 @@ export function Menu() {
       <ul>
         {allTags &&
           allTags.map((tag) => (
-            <li key={tag.id}>
+            <LiMenu
+              key={tag.id}
+              active={pathname === `${tag.path}` ? "ACTIVE" : "NOT_ACTIVE"}
+            >
               <NavLink href={tag.path}>
-                <Tag size={32} color="#F8F5F9"/>
-                <Anchor active={pathname === `${tag.path}` ? 'underline' : 'none'}>
-                  {tag.description}
-                </Anchor>
+                <Tag size={32} color="#F8F5F9" />
+                <Anchor>{tag.description}</Anchor>
               </NavLink>
-            </li>
+            </LiMenu>
           ))}
 
-        <li >
-          <NavLink href='/cart'>
-            <Tag size={32} color="#F8F5F9"/>
-            <Anchor active={pathname === '/cart' ? 'underline' : 'none'}>
-              Cart
-            </Anchor>
+        <LiMenu active={pathname === "/cart" ? "ACTIVE" : "NOT_ACTIVE"}>
+          <NavLink href="/cart">
+            <Tag size={32} color="#F8F5F9" />
+            <Anchor>Cart</Anchor>
           </NavLink>
-        </li>
+        </LiMenu>
       </ul>
     </Container>
   );
