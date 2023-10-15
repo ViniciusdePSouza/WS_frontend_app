@@ -7,10 +7,9 @@ After that, navigate into the folder project and install all the dependencies us
 
 ```bash
 npm install
-
 # or 
 yarn install.
-
+```
 Then you should be able to run the project using:
 
 ```bash
