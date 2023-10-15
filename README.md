@@ -6,7 +6,7 @@ First, clone the repository using git clone on your machine.
 After that, navigate into the folder project and install all the dependencies using: 
 
 ```bash
-npm isntall
+npm install
 
 # or 
 yarn install.
