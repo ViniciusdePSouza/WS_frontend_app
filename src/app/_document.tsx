@@ -1,3 +1,5 @@
+"use client";
+
 import { Html, Main, Head, NextScript } from "next/document";
 
 export default function Document() {

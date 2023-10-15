@@ -19,6 +19,7 @@ export const Content = styled.div`
 
   img {
     width: 50%;
+    max-height: 300px;
     border-radius: 16px;
   }
 `;

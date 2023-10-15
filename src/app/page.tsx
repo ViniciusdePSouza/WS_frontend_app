@@ -31,13 +31,14 @@ export default function Home() {
       const response = await fetchAllProducts();
       const allProducts = response.data;
       const filteredByTagProducts = allProducts.filter(
-        (product: { tag: number }) => product.tag === 2
+        (product: { tag: number }) => product.tag === 1
       );
       setProducts(filteredByTagProducts);
     }
 
     populateAllTags();
   }, []);
+
 
   return (
     <Container>
