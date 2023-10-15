@@ -7,7 +7,7 @@ export const Container = styled.div`
   align-items: center;
 
   border-right: 4px solid ${({ theme }) => theme.COLORS.GRAY_50};
-  
+
   padding: 0 2rem;
 `;
 
@@ -34,14 +34,15 @@ export const ProductInfo = styled.div`
 
   font-family: "Roboto", sans-serif;
 
-
-
   strong {
     font-size: 2.4rem;
     font-weight: 700;
   }
 
-  span,
+  span {
+    font-size: 1.6rem;
+    font-weight: 700;
+  }
   p {
     font-size: 1.6rem;
     font-weight: 400;
